@@ -13,9 +13,10 @@ public class WebServer {
         server.start();
         System.out.println("Server started at http://localhost:8081");
     }
+
     static class HelloHandler implements HttpHandler {
         public void handle(HttpExchange exchange) throws IOException {
-            String response = "Hello Word from Jenkins + GitHub!";
+            String response = "Hello Công Nghệ Phần Mềm";
             exchange.sendResponseHeaders(200, response.length());
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(response.getBytes());
